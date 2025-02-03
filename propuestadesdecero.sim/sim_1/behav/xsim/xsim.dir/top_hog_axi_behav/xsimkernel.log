@@ -1,0 +1,7 @@
+Running: xsim.dir/top_hog_axi_behav/xsimk -simmode gui -wdb top_hog_axi_behav.wdb -simrunnum 0 -socket 48213
+Design successfully loaded
+Design Loading Memory Usage: 32852 KB (Peak: 33428 KB)
+Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 122788 KB (Peak: 180124 KB)
+Simulation CPU Usage: 10 ms

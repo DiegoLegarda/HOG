@@ -1,0 +1,1 @@
+-wto "1ea97f2240274605b36f3c38d6d6a066" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "testbench_top_hog_func_synth" "xil_defaultlib.testbench_top_hog" -log "elaborate.log" 

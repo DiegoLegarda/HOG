@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/diego/propuestadesdecero/propuestadesdecero.sim/sim_1/synth/func/xsim/testbench_top_hog_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_sobel'
+INFO: [VRFC 10-3107] analyzing entity 'hog_cell_histogram_with_fifo'
+INFO: [VRFC 10-3107] analyzing entity 'top_hog_axi'

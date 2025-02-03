@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../propuestadesdecero.srcs/sources_1/new/FIFOSobel.vhd" \
+"../../../../propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd" \
+"../../../../propuestadesdecero.srcs/sources_1/new/block_formation.vhd" \
+"../../../../propuestadesdecero.srcs/sources_1/new/Top_module.vhd" \
+
+# Do not sort compile order
+nosort

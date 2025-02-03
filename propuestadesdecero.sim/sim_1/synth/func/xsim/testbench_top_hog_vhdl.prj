@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"testbench_top_hog_func_synth.vhd" \
+"../../../../../propuestadesdecero.srcs/sim_1/new/test_Fifo.vhd" \
+
+# Do not sort compile order
+nosort

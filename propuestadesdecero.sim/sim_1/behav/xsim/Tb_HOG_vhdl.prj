@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../propuestadesdecero.srcs/sources_1/imports/src/Hogpack.vhd" \
+"../../../../propuestadesdecero.srcs/sim_1/new/test_Fifo.vhd" \
+
+# Do not sort compile order
+nosort

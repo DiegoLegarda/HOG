@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Jan 13 02:54:39 2025
+# Process ID: 15116
+# Current directory: D:/ProgramasDoctorado/propuestadesdecero
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17032 D:\ProgramasDoctorado\propuestadesdecero\propuestadesdecero.xpr
+# Log file: D:/ProgramasDoctorado/propuestadesdecero/vivado.log
+# Journal file: D:/ProgramasDoctorado/propuestadesdecero\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/ProgramasDoctorado/propuestadesdecero/tb_fifo_sobel_behav.wcfg
+source testbench_top_hog.tcl
+run 10 us
+run 2 ms
