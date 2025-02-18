@@ -49,10 +49,10 @@ architecture Behavioral of hog_block_histogram is
 begin
 
     process(clk)
-        variable bin_sum : unsigned(BIN_WIDTH+4 downto 0) := (others => '0'); -- Suma de todos los bins
+        variable bin_sum : unsigned(BIN_WIDTH+6 downto 0) := (others => '0'); -- Suma de todos los bins
         variable average : unsigned(BIN_WIDTH-1 downto 0);                    -- Promedio de los bins
         variable bin_idx, cell_idx : integer;                                  
-        variable bin_value : unsigned(14 downto 0);                           
+        variable bin_value : unsigned(20 downto 0);                           
     begin
         if rising_edge(clk) then
             if reset = '1' then

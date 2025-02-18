@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1738287049">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1738964566">
   <File Type="PA-TCL" Name="top_hog_axi.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_hog_axi_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_hog_axi_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_hog_axi.vds"/>
   <File Type="RDS-UTIL" Name="top_hog_axi_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_hog_axi_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_hog_axi.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_hog_axi_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="top_hog_axi_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/src/FIFO_control.vhd">

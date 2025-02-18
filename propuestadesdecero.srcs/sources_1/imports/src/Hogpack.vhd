@@ -1,4 +1,3 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -49,7 +48,7 @@ constant Niter: POSITIVE := 3;
 
  -- Arreglo fifo
               -- Definir el tipo para los 9 bines dentro de una celda (cada bin es un std_logic_vector(14 downto 0))
-        type Celda is array (0 to 8) of std_logic_vector(14 downto 0);
+        type Celda is array (0 to 8) of std_logic_vector(20 downto 0);
         
         -- Definir el tipo para el histograma que tiene 8 celdas
         type Histograma_fifo_type is array (0 to 15) of Celda;

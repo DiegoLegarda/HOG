@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="115890500000fs"></ZoomStartTime>
-      <ZoomEndTime time="116547500001fs"></ZoomEndTime>
-      <Cursor1Time time="116060000000fs"></Cursor1Time>
+      <ZoomStartTime time="120605833333fs"></ZoomStartTime>
+      <ZoomEndTime time="121078833334fs"></ZoomEndTime>
+      <Cursor1Time time="121000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="145"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="313"></NameColumnWidth>
+      <ValueColumnWidth column_width="272"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="48" />
+   <WVObjectSize size="54" />
    <wave_markers>
       <marker time="377200000" label="" />
       <marker time="740000000" label="" />
@@ -33,6 +33,7 @@
       <marker time="59450000000" label="" />
       <marker time="66520000000" label="" />
       <marker time="67290000000" label="" />
+      <marker time="2910000000" label="" />
    </wave_markers>
    <wvobject fp_name="/testbench_top_hog/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
@@ -111,10 +112,6 @@
       <obj_property name="ElementShortName">cell_histogram_ready</obj_property>
       <obj_property name="ObjectShortName">cell_histogram_ready</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/cell_idx" type="other">
-      <obj_property name="ElementShortName">cell_idx</obj_property>
-      <obj_property name="ObjectShortName">cell_idx</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/prev_cell_idx" type="other">
       <obj_property name="ElementShortName">prev_cell_idx</obj_property>
       <obj_property name="ObjectShortName">prev_cell_idx</obj_property>
@@ -145,30 +142,9 @@
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_hog/uut/s_hist_bloque" type="array">
-      <obj_property name="ElementShortName">s_hist_bloque[0:3][0:8][14:0]</obj_property>
-      <obj_property name="ObjectShortName">s_hist_bloque[0:3][0:8][14:0]</obj_property>
+      <obj_property name="ElementShortName">s_hist_bloque[0:3][0:8][20:0]</obj_property>
+      <obj_property name="ObjectShortName">s_hist_bloque[0:3][0:8][20:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/testbench_top_hog/uut/s_hist_bloque[0]" type="array">
-         <obj_property name="ElementShortName">[0][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:8][14:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/s_hist_bloque[1]" type="array">
-         <obj_property name="ElementShortName">[1][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:8][14:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/s_hist_bloque[2]" type="array">
-         <obj_property name="ElementShortName">[2][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:8][14:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/s_hist_bloque[3]" type="array">
-         <obj_property name="ElementShortName">[3][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:8][14:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject fp_name="/testbench_top_hog/uut/s_contador" type="other">
       <obj_property name="ElementShortName">s_contador</obj_property>
@@ -179,81 +155,9 @@
       <obj_property name="ObjectShortName">s_start_bina</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo" type="array">
-      <obj_property name="ElementShortName">Histograma_fifo[0:15][0:8][14:0]</obj_property>
-      <obj_property name="ObjectShortName">Histograma_fifo[0:15][0:8][14:0]</obj_property>
+      <obj_property name="ElementShortName">Histograma_fifo[0:15][0:8][20:0]</obj_property>
+      <obj_property name="ObjectShortName">Histograma_fifo[0:15][0:8][20:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[0]" type="array">
-         <obj_property name="ElementShortName">[0][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[1]" type="array">
-         <obj_property name="ElementShortName">[1][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[2]" type="array">
-         <obj_property name="ElementShortName">[2][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[3]" type="array">
-         <obj_property name="ElementShortName">[3][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[4]" type="array">
-         <obj_property name="ElementShortName">[4][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[5]" type="array">
-         <obj_property name="ElementShortName">[5][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[6]" type="array">
-         <obj_property name="ElementShortName">[6][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[7]" type="array">
-         <obj_property name="ElementShortName">[7][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[8]" type="array">
-         <obj_property name="ElementShortName">[8][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[8][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[9]" type="array">
-         <obj_property name="ElementShortName">[9][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[9][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[10]" type="array">
-         <obj_property name="ElementShortName">[10][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[10][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[11]" type="array">
-         <obj_property name="ElementShortName">[11][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[11][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[12]" type="array">
-         <obj_property name="ElementShortName">[12][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[12][0:8][14:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[13]" type="array">
-         <obj_property name="ElementShortName">[13][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[13][0:8][14:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[14]" type="array">
-         <obj_property name="ElementShortName">[14][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[14][0:8][14:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/Histograma_fifo[15]" type="array">
-         <obj_property name="ElementShortName">[15][0:8][14:0]</obj_property>
-         <obj_property name="ObjectShortName">[15][0:8][14:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/s_bin" type="other">
-      <obj_property name="ElementShortName">s_bin</obj_property>
-      <obj_property name="ObjectShortName">s_bin</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/grad_valid_in" type="logic">
       <obj_property name="ElementShortName">grad_valid_in</obj_property>
@@ -310,6 +214,14 @@
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/s_bin" type="other">
+      <obj_property name="ElementShortName">s_bin</obj_property>
+      <obj_property name="ObjectShortName">s_bin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/cell_idx" type="other">
+      <obj_property name="ElementShortName">cell_idx</obj_property>
+      <obj_property name="ObjectShortName">cell_idx</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/mag_complete" type="logic">
       <obj_property name="ElementShortName">mag_complete</obj_property>
       <obj_property name="ObjectShortName">mag_complete</obj_property>
@@ -317,6 +229,173 @@
    <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/bin_complete" type="logic">
       <obj_property name="ElementShortName">bin_complete</obj_property>
       <obj_property name="ObjectShortName">bin_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/aux_ratio" type="other">
+      <obj_property name="ElementShortName">aux_ratio</obj_property>
+      <obj_property name="ObjectShortName">aux_ratio</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms" type="array">
+      <obj_property name="ElementShortName">fifo_histograms[0:15][0:8][20:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_histograms[0:15][0:8][20:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[0]" type="array">
+         <obj_property name="ElementShortName">[0][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[1]" type="array">
+         <obj_property name="ElementShortName">[1][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[2]" type="array">
+         <obj_property name="ElementShortName">[2][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[3]" type="array">
+         <obj_property name="ElementShortName">[3][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[4]" type="array">
+         <obj_property name="ElementShortName">[4][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[5]" type="array">
+         <obj_property name="ElementShortName">[5][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[6]" type="array">
+         <obj_property name="ElementShortName">[6][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[7]" type="array">
+         <obj_property name="ElementShortName">[7][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[8]" type="array">
+         <obj_property name="ElementShortName">[8][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[9]" type="array">
+         <obj_property name="ElementShortName">[9][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[10]" type="array">
+         <obj_property name="ElementShortName">[10][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11]" type="array">
+         <obj_property name="ElementShortName">[11][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][0:8][20:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][0]" type="array">
+            <obj_property name="ElementShortName">[0][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[0][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][1]" type="array">
+            <obj_property name="ElementShortName">[1][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[1][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][2]" type="array">
+            <obj_property name="ElementShortName">[2][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[2][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][3]" type="array">
+            <obj_property name="ElementShortName">[3][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[3][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][4]" type="array">
+            <obj_property name="ElementShortName">[4][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[4][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][5]" type="array">
+            <obj_property name="ElementShortName">[5][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[5][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][6]" type="array">
+            <obj_property name="ElementShortName">[6][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[6][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][7]" type="array">
+            <obj_property name="ElementShortName">[7][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[7][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[11][8]" type="array">
+            <obj_property name="ElementShortName">[8][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[8][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12]" type="array">
+         <obj_property name="ElementShortName">[12][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][0:8][20:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][0]" type="array">
+            <obj_property name="ElementShortName">[0][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[0][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][1]" type="array">
+            <obj_property name="ElementShortName">[1][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[1][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][2]" type="array">
+            <obj_property name="ElementShortName">[2][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[2][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][3]" type="array">
+            <obj_property name="ElementShortName">[3][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[3][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][4]" type="array">
+            <obj_property name="ElementShortName">[4][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[4][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][5]" type="array">
+            <obj_property name="ElementShortName">[5][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[5][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][6]" type="array">
+            <obj_property name="ElementShortName">[6][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[6][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][7]" type="array">
+            <obj_property name="ElementShortName">[7][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[7][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[12][8]" type="array">
+            <obj_property name="ElementShortName">[8][20:0]</obj_property>
+            <obj_property name="ObjectShortName">[8][20:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[13]" type="array">
+         <obj_property name="ElementShortName">[13][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[14]" type="array">
+         <obj_property name="ElementShortName">[14][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][0:8][20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_top_hog/uut/hog_cell_histogram_inst/fifo_histograms[15]" type="array">
+         <obj_property name="ElementShortName">[15][0:8][20:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][0:8][20:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="/testbench_top_hog/uut/hog_block_histogram_inst/block_valid" type="logic">
       <obj_property name="ElementShortName">block_valid</obj_property>
@@ -335,5 +414,21 @@
    <wvobject fp_name="/testbench_top_hog/uut/hog_block_histogram_inst/valid_block" type="logic">
       <obj_property name="ElementShortName">valid_block</obj_property>
       <obj_property name="ObjectShortName">valid_block</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_hog/WOMenable_HIsto" type="logic">
+      <obj_property name="ElementShortName">WOMenable_HIsto</obj_property>
+      <obj_property name="ObjectShortName">WOMenable_HIsto</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_hog/uut/Histogramas" type="array">
+      <obj_property name="ElementShortName">Histogramas[0:15][0:8][20:0]</obj_property>
+      <obj_property name="ObjectShortName">Histogramas[0:15][0:8][20:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_hog/s_Histogramas" type="array">
+      <obj_property name="ElementShortName">s_Histogramas[0:15][0:8][20:0]</obj_property>
+      <obj_property name="ObjectShortName">s_Histogramas[0:15][0:8][20:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_hog/uut/s_lock_ultimo_bloque" type="logic">
+      <obj_property name="ElementShortName">s_lock_ultimo_bloque</obj_property>
+      <obj_property name="ObjectShortName">s_lock_ultimo_bloque</obj_property>
    </wvobject>
 </wave_config>

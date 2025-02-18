@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Jan 30 20:30:52 2025
-# Process ID: 15724
+# Start of session at: Fri Feb  7 16:42:48 2025
+# Process ID: 19540
 # Current directory: D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.runs/synth_1
 # Command line: vivado.exe -log top_hog_axi.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_hog_axi.tcl
 # Log file: D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.runs/synth_1/top_hog_axi.vds
@@ -15,15 +15,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15460 
+INFO: Helper process launched with PID 14348 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 363.875 ; gain = 100.961
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 362.898 ; gain = 100.750
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_hog_axi' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:41]
 	Parameter MBW bound to: 8 - type: integer 
 	Parameter PBW bound to: 8 - type: integer 
 	Parameter HP bound to: 34 - type: integer 
-INFO: [Synth 8-3491] module 'edge_detection' declared at 'D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/imports/src/edge_detection.vhd:10' bound to instance 'U_sobel' of component 'edge_detection' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:159]
+INFO: [Synth 8-3491] module 'edge_detection' declared at 'D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/imports/src/edge_detection.vhd:10' bound to instance 'U_sobel' of component 'edge_detection' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:160]
 INFO: [Synth 8-638] synthesizing module 'edge_detection' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/imports/src/edge_detection.vhd:27]
 	Parameter MBW bound to: 8 - type: integer 
 	Parameter PBW bound to: 8 - type: integer 
@@ -57,7 +57,7 @@ INFO: [Synth 8-256] done synthesizing module 'edge_detection' (4#1) [D:/Programa
 	Parameter NUM_BINS bound to: 9 - type: integer 
 	Parameter BIN_WIDTH bound to: 16 - type: integer 
 	Parameter FIFO_SIZE bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'hog_cell_histogram_with_fifo' declared at 'D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:13' bound to instance 'hog_cell_histogram_inst' of component 'hog_cell_histogram_with_fifo' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:178]
+INFO: [Synth 8-3491] module 'hog_cell_histogram_with_fifo' declared at 'D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:13' bound to instance 'hog_cell_histogram_inst' of component 'hog_cell_histogram_with_fifo' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:179]
 INFO: [Synth 8-638] synthesizing module 'hog_cell_histogram_with_fifo' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:35]
 	Parameter NUM_BINS bound to: 9 - type: integer 
 	Parameter BIN_WIDTH bound to: 16 - type: integer 
@@ -65,48 +65,46 @@ INFO: [Synth 8-638] synthesizing module 'hog_cell_histogram_with_fifo' [D:/Progr
 	Parameter IMG_WIDTH bound to: 32 - type: integer 
 	Parameter CELL_SIZE bound to: 8 - type: integer 
 WARNING: [Synth 8-5856] 3D RAM Histograma_fifo_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-6014] Unused sequential element pixel_counter_x_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:193]
-WARNING: [Synth 8-6014] Unused sequential element pixel_counter_y_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:194]
-WARNING: [Synth 8-6014] Unused sequential element magnitude_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:247]
-WARNING: [Synth 8-6014] Unused sequential element bin_complete_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:277]
-WARNING: [Synth 8-6014] Unused sequential element gx_scaled_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:296]
-WARNING: [Synth 8-6014] Unused sequential element gy_scaled_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:297]
-WARNING: [Synth 8-6014] Unused sequential element ratio_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:301]
-WARNING: [Synth 8-6014] Unused sequential element histogram_complete_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:357]
-WARNING: [Synth 8-6014] Unused sequential element calc_complete_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:508]
-WARNING: [Synth 8-6014] Unused sequential element bin_lower_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:512]
-WARNING: [Synth 8-6014] Unused sequential element bin_upper_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:513]
-WARNING: [Synth 8-6014] Unused sequential element half_mag_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element pixel_counter_x_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element pixel_counter_y_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:195]
+WARNING: [Synth 8-6014] Unused sequential element magnitude_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:248]
+WARNING: [Synth 8-6014] Unused sequential element gx_scaled_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:297]
+WARNING: [Synth 8-6014] Unused sequential element gy_scaled_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:298]
+WARNING: [Synth 8-6014] Unused sequential element ratio_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:302]
+WARNING: [Synth 8-6014] Unused sequential element calc_complete_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:519]
+WARNING: [Synth 8-6014] Unused sequential element bin_lower_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:523]
+WARNING: [Synth 8-6014] Unused sequential element bin_upper_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:524]
+WARNING: [Synth 8-6014] Unused sequential element half_mag_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:525]
 INFO: [Synth 8-256] done synthesizing module 'hog_cell_histogram_with_fifo' (5#1) [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/HOG_Block_HIstogram.vhd:35]
 	Parameter NUM_BINS bound to: 9 - type: integer 
 	Parameter BIN_WIDTH bound to: 16 - type: integer 
 	Parameter BLOCK_SIZE bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'hog_block_histogram' declared at 'D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:25' bound to instance 'hog_block_histogram_inst' of component 'hog_block_histogram' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:201]
+INFO: [Synth 8-3491] module 'hog_block_histogram' declared at 'D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:25' bound to instance 'hog_block_histogram_inst' of component 'hog_block_histogram' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:202]
 INFO: [Synth 8-638] synthesizing module 'hog_block_histogram' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:41]
 	Parameter NUM_BINS bound to: 9 - type: integer 
 	Parameter BIN_WIDTH bound to: 16 - type: integer 
 	Parameter BLOCK_SIZE bound to: 4 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element bin_sum_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:62]
-WARNING: [Synth 8-6014] Unused sequential element bin_value_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:68]
-WARNING: [Synth 8-6014] Unused sequential element average_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:76]
-WARNING: [Synth 8-6014] Unused sequential element s_average_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:77]
+INFO: [Synth 8-226] default block is never used [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:71]
+WARNING: [Synth 8-6014] Unused sequential element bin_value_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:81]
+WARNING: [Synth 8-6014] Unused sequential element s_average_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:90]
 INFO: [Synth 8-256] done synthesizing module 'hog_block_histogram' (6#1) [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/block_formation.vhd:41]
 WARNING: [Synth 8-5856] 3D RAM s_hist_bloque_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element s_lock_ultimo_bloque_reg was removed.  [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:223]
 WARNING: [Synth 8-3848] Net block_histogram in module/entity top_hog_axi does not have driver. [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:48]
 WARNING: [Synth 8-3848] Net s_fin_cel_edge in module/entity top_hog_axi does not have driver. [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:62]
 INFO: [Synth 8-256] done synthesizing module 'top_hog_axi' (7#1) [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/new/Top_module.vhd:41]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 442.195 ; gain = 179.281
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 439.492 ; gain = 177.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 442.195 ; gain = 179.281
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 439.492 ; gain = 177.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 442.195 ; gain = 179.281
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 439.492 ; gain = 177.344
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-5546] ROM "FIFO_ready" won't be mapped to RAM because it is too sparse
@@ -151,8 +149,22 @@ INFO: [Synth 8-5544] ROM "bin" won't be mapped to Block RAM because address size
 INFO: [Synth 8-5544] ROM "bin" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "bin" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "bin" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'step_counter_reg' in module 'hog_block_histogram'
+INFO: [Synth 8-5544] ROM "average" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "bin_sum" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "valid_block" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "step_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               00
+                 iSTATE0 |                             0010 |                               01
+                 iSTATE1 |                             0100 |                               10
+                 iSTATE2 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'step_counter_reg' using encoding 'one-hot' in module 'hog_block_histogram'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 592.273 ; gain = 329.359
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 510.246 ; gain = 248.098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -168,7 +180,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
 	   2 Input     31 Bit       Adders := 2     
-	  36 Input     21 Bit       Adders := 1     
+	  37 Input     21 Bit       Adders := 1     
 	   2 Input     15 Bit       Adders := 1     
 	   3 Input     10 Bit       Adders := 3     
 	   2 Input     10 Bit       Adders := 3     
@@ -182,21 +194,25 @@ Detailed RTL Component Info :
 	              568 Bit    Registers := 1     
 	               36 Bit    Registers := 1     
 	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 	               15 Bit    Registers := 180   
 	               10 Bit    Registers := 9     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 4     
+	                4 Bit    Registers := 5     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 14    
+	                1 Bit    Registers := 17    
 +---Muxes : 
 	   2 Input    568 Bit        Muxes := 1     
+	   4 Input     36 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 3     
 	   2 Input     31 Bit        Muxes := 2     
-	   8 Input     15 Bit        Muxes := 36    
+	   4 Input     21 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 36    
 	   2 Input     10 Bit        Muxes := 7     
 	   2 Input      7 Bit        Muxes := 1     
 	   3 Input      6 Bit        Muxes := 1     
@@ -205,11 +221,11 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 15    
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 6     
-	   8 Input      3 Bit        Muxes := 36    
 	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 182   
+	   2 Input      1 Bit        Muxes := 189   
 	   3 Input      1 Bit        Muxes := 1     
-	   9 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   7 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -229,10 +245,9 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   8 Input     15 Bit        Muxes := 36    
-	   8 Input      3 Bit        Muxes := 36    
-	   9 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 36    
+	   2 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 1     
 Module FIFO_control 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -288,9 +303,9 @@ Detailed RTL Component Info :
 	               15 Bit    Registers := 144   
 	               10 Bit    Registers := 7     
 	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
+	                4 Bit    Registers := 4     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 3     
 	   2 Input     31 Bit        Muxes := 2     
@@ -300,14 +315,22 @@ Detailed RTL Component Info :
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 6     
 	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 166   
+	   2 Input      1 Bit        Muxes := 167   
 Module hog_block_histogram 
 Detailed RTL Component Info : 
 +---Adders : 
-	  36 Input     21 Bit       Adders := 1     
+	  37 Input     21 Bit       Adders := 1     
 +---Registers : 
 	               36 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     36 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 1     
+	   4 Input     21 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -325,34 +348,33 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'A3/s_v_ready_reg' into 'A2/s_h_ready_reg' [D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.srcs/sources_1/imports/src/vertical_gradient.vhd:48]
+INFO: [Synth 8-5546] ROM "A1/border" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "A1/FIFO_ready" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "cell_x_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "y_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "s_start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "s_start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "calc_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "mag_complete" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "U_sobel/A1/border" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "U_sobel/A1/FIFO_ready" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3886] merging instance 'U_sobel/A3/sv_pixel_out_reg[8]' (FDCE) to 'U_sobel/A3/sv_pixel_out_reg[9]'
 INFO: [Synth 8-3886] merging instance 'U_sobel/A2/sh_pixel_out_reg[8]' (FDCE) to 'U_sobel/A2/sh_pixel_out_reg[9]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[0]' (FDRE) to 'serialized_histogram_reg[1]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[1]' (FDRE) to 'serialized_histogram_reg[2]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[2]' (FDRE) to 'serialized_histogram_reg[3]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[3]' (FDRE) to 'serialized_histogram_reg[4]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[4]' (FDRE) to 'serialized_histogram_reg[5]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[5]' (FDRE) to 'serialized_histogram_reg[6]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[6]' (FDRE) to 'serialized_histogram_reg[7]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[7]' (FDRE) to 'serialized_histogram_reg[8]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[8]' (FDRE) to 'serialized_histogram_reg[9]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[9]' (FDRE) to 'serialized_histogram_reg[10]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[10]' (FDRE) to 'serialized_histogram_reg[11]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[11]' (FDRE) to 'serialized_histogram_reg[12]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[12]' (FDRE) to 'serialized_histogram_reg[13]'
-INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[13]' (FDRE) to 'serialized_histogram_reg[14]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[0]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[1]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[2]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[3]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[4]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[5]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[6]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[7]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[8]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[9]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[10]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[11]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[12]' (FDRE) to 'serialized_histogram_reg[15]'
+INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[13]' (FDRE) to 'serialized_histogram_reg[15]'
 INFO: [Synth 8-3886] merging instance 'serialized_histogram_reg[14]' (FDRE) to 'serialized_histogram_reg[15]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\serialized_histogram_reg[15] )
-INFO: [Synth 8-3886] merging instance 'hog_cell_histogram_inst/cell_x_counter_reg[0]__0' (FDRE) to 'hog_cell_histogram_inst/cell_x_counter_reg[0]'
-INFO: [Synth 8-3886] merging instance 'hog_cell_histogram_inst/cell_x_counter_reg[1]__0' (FDRE) to 'hog_cell_histogram_inst/cell_x_counter_reg[1]'
 INFO: [Synth 8-3886] merging instance 'hog_cell_histogram_inst/abs_Gx_reg[9]' (FDE) to 'hog_cell_histogram_inst/abs_Gy_reg[9]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (hog_cell_histogram_inst/\abs_Gy_reg[9] )
 INFO: [Synth 8-3886] merging instance 'hog_cell_histogram_inst/b_reg[9]' (FDE) to 'hog_cell_histogram_inst/a_reg[9]'
@@ -361,7 +383,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (hog_cell_
 INFO: [Synth 8-3886] merging instance 'hog_cell_histogram_inst/a_reg[9]' (FDE) to 'hog_cell_histogram_inst/temp2_reg[8]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (hog_cell_histogram_inst/\temp2_reg[8] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -374,7 +396,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -385,8 +407,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'hog_cell_histogram_inst/cell_x_counter_reg[1]__0' (FDRE) to 'hog_cell_histogram_inst/cell_x_counter_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hog_cell_histogram_inst/cell_x_counter_reg[0]__0' (FDRE) to 'hog_cell_histogram_inst/cell_x_counter_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -410,7 +434,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -423,7 +447,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -435,25 +459,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -485,53 +509,54 @@ Report Cell Usage:
 +------+--------+------+
 |1     |BUFG    |     1|
 |2     |CARRY4  |    24|
-|3     |LUT1    |     9|
-|4     |LUT2    |    60|
-|5     |LUT3    |    44|
-|6     |LUT4    |    40|
-|7     |LUT5    |    50|
-|8     |LUT6    |    20|
+|3     |LUT1    |    10|
+|4     |LUT2    |    63|
+|5     |LUT3    |    47|
+|6     |LUT4    |    46|
+|7     |LUT5    |    57|
+|8     |LUT6    |    21|
 |9     |SRLC32E |    16|
 |10    |FDCE    |   116|
-|11    |FDRE    |   153|
-|12    |IBUF    |    11|
-|13    |OBUF    |    49|
+|11    |FDRE    |   165|
+|12    |FDSE    |     1|
+|13    |IBUF    |    11|
+|14    |OBUF    |    49|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------------------------+-----------------------------+------+
 |      |Instance                   |Module                       |Cells |
 +------+---------------------------+-----------------------------+------+
-|1     |top                        |                             |   593|
+|1     |top                        |                             |   627|
 |2     |  U_sobel                  |edge_detection               |   244|
-|3     |    A1                     |FIFO_control                 |   189|
-|4     |    A2                     |horizontal_gradient          |    23|
+|3     |    A1                     |FIFO_control                 |   191|
+|4     |    A2                     |horizontal_gradient          |    24|
 |5     |    A3                     |vertical_gradient            |    22|
-|6     |  hog_block_histogram_inst |hog_block_histogram          |     1|
-|7     |  hog_cell_histogram_inst  |hog_cell_histogram_with_fifo |   277|
+|6     |  hog_block_histogram_inst |hog_block_histogram          |    10|
+|7     |  hog_cell_histogram_inst  |hog_cell_histogram_with_fifo |   302|
 +------+---------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 615.453 ; gain = 352.539
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 613.109 ; gain = 350.961
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 700.035 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 701.965 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-106 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+114 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 700.035 ; gain = 447.375
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 700.035 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 701.965 ; gain = 452.742
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 701.965 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/ProgramasDoctorado/propuestadesdecero/propuestadesdecero.runs/synth_1/top_hog_axi.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_hog_axi_utilization_synth.rpt -pb top_hog_axi_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 30 20:31:22 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  7 16:43:05 2025...

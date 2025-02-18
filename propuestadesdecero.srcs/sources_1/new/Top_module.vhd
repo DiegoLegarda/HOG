@@ -29,12 +29,14 @@ entity top_hog_axi is
         s_axis_tvalid : in  STD_LOGIC;                    -- AXI Stream valid
         s_axis_tdata  : in  STD_LOGIC_VECTOR(7 downto 0); -- Entrada de píxel (8 bits)
         s_axis_tready : out STD_LOGIC;                    -- AXI Stream ready
-        out_grad_valid :    out STD_LOGIC;                    -- AXI Stream ready
+        out_grad_valid :    out STD_LOGIC;                    -- salida gradiente valida
+        out_celda_valid :    out STD_LOGIC;                    -- salida celda valida
         m_axis_tvalid : out STD_LOGIC;                    -- AXI Stream valid (salida)
         m_axis_tdata  : out STD_LOGIC_VECTOR(15 downto 0); -- Histograma del bloque (36 bins x 16 bits)
         gradx  : out STD_LOGIC_VECTOR(9 downto 0); -- Histograma del bloque (36 bins x 16 bits)
         grady  : out STD_LOGIC_VECTOR(9 downto 0); -- Histograma del bloque (36 bins x 16 bits)
-        out_magnitud        : out  STD_LOGIC_VECTOR(9 downto 0) -- magnitud
+        out_magnitud        : out  STD_LOGIC_VECTOR(9 downto 0); -- magnitud
+        Histogramas: out Histograma_fifo_type
     );
 end top_hog_axi;
 
@@ -139,6 +141,7 @@ end component;
 begin
     
     --sinais para teste
+    out_celda_valid<=s_lock_ultimo_bloque;
     out_grad_valid<=s_ready_histo;
     gradx<=grad_x;
     grady<=grad_y;
@@ -223,6 +226,7 @@ if rising_edge(clk) then
     s_lock_ultimo_bloque<='0'; 
     
     else
+        s_lock_ultimo_bloque<='0';
         s_start_bina<='0';
         if fifo_valid='1' then
             s_contador<=s_contador+1;
@@ -322,7 +326,7 @@ end process;
     -- Salidas optimizadas
     m_axis_tvalid <= serialized_valid;
     m_axis_tdata <= serialized_histogram;
-
+    Histogramas <=fifo_histograms;
 --    -- Salida del flujo AXI
 --    m_axis_tvalid <= block_valid;
 --    m_axis_tdata  <= block_histogram;

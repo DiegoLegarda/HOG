@@ -22,6 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use STD.TEXTIO.ALL;
 use IEEE.STD_LOGIC_TEXTIO.ALL;
+use work.Hogpack.all;
 
 entity testbench_top_hog is
 end entity testbench_top_hog;
@@ -34,13 +35,15 @@ architecture Behavioral of testbench_top_hog is
             reset         : in  STD_LOGIC;
             s_axis_tvalid : in  STD_LOGIC;
             out_grad_valid :    out STD_LOGIC;
+            out_celda_valid :    out STD_LOGIC;                    -- salida celda valida
             s_axis_tdata  : in  STD_LOGIC_VECTOR(7 downto 0);
             s_axis_tready : out STD_LOGIC;
             m_axis_tvalid : out STD_LOGIC;
             m_axis_tdata  : out STD_LOGIC_VECTOR(15 downto 0);
             gradx  : out STD_LOGIC_VECTOR(9 downto 0); -- Histograma del bloque (36 bins x 16 bits)
             grady  : out STD_LOGIC_VECTOR(9 downto 0);
-            out_magnitud        : out  STD_LOGIC_VECTOR(9 downto 0) -- magnitud
+            out_magnitud        : out  STD_LOGIC_VECTOR(9 downto 0); -- magnitud
+            Histogramas: out Histograma_fifo_type
         );
     end component;
 
@@ -57,7 +60,10 @@ architecture Behavioral of testbench_top_hog is
     signal smagnitud  : STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
     signal sstar_ini   : std_logic:= '0';
     signal WOMenable   : std_logic:='0';
+    signal WOMenable_HIsto   : std_logic:='0';
     signal sout_grad_valid  : std_logic:='0';
+    signal sout_celda_valid  : std_logic:='0';
+    signal s_Histogramas: Histograma_fifo_type;
     
 
     -- Clock
@@ -80,13 +86,15 @@ begin
             reset         => reset,
             s_axis_tvalid => s_axis_tvalid,
             out_grad_valid=>sout_grad_valid,
+            out_celda_valid=>sout_celda_valid,
             s_axis_tdata  => s_axis_tdata,
             s_axis_tready => s_axis_tready,
             m_axis_tvalid => m_axis_tvalid,
             m_axis_tdata  => m_axis_tdata,
             gradx=>sgradx,
             grady=>sgrady,
-            out_magnitud=>smagnitud
+            out_magnitud=>smagnitud,
+            Histogramas=>s_Histogramas
         );
 
     -- Generador de reloj
@@ -158,7 +166,7 @@ begin
 
 
   romX: process(clk)
-        file infile_pixel: text is in "pixeles.txt";  --test en Binario
+        file infile_pixel: text is in "D:\ProgramasDoctorado\propuestadesdecero\matlab\pixeles.txt";  --test en Binario
         variable inline_pixel: line;
         variable data_pixel: std_logic_vector(7 downto 0); -- Ajustar tama√±o
     begin
@@ -189,9 +197,9 @@ WOMenable <= sout_grad_valid;
 
     wom_out: process(clk)
         variable out_line: line;
-        file out_file: text is out "gradx.txt";
-        file out_file2: text is out "grady.txt";
-        file out_file3: text is out "magnitud.txt";
+        file out_file: text is out "D:\ProgramasDoctorado\propuestadesdecero\matlab\gradx.txt";
+        file out_file2: text is out "D:\ProgramasDoctorado\propuestadesdecero\matlab\grady.txt";
+        file out_file3: text is out "D:\ProgramasDoctorado\propuestadesdecero\matlab\magnitud.txt";
     begin
         if rising_edge(clk) then
             if WOMenable = '1' then
@@ -201,6 +209,37 @@ WOMenable <= sout_grad_valid;
                 writeline(out_file2, out_line);
                 write(out_line, smagnitud);
                 writeline(out_file3, out_line);
+            end if;
+        end if;
+    end process;
+
+WOMenable_HIsto<=sout_celda_valid;
+
+-- Proceso para enviar los histogramas por celdas
+    Histogramas_out: process(clk)
+        file out_file: text open write_mode is "D:\ProgramasDoctorado\propuestadesdecero\matlab\histograma.txt";
+        variable current_line: line;
+--        variable celda_idx: integer range 0 to 15:=0; 
+    begin
+        if rising_edge(clk) then
+            if WOMenable_HIsto='1' then
+                  -- Itera a travÈs de cada Celda (0 a 15)
+            for celda_idx in 0 to 15 loop
+                -- Itera a travÈs de cada Bin (0 a 8)
+                for bin_idx in 0 to 8 loop
+                    -- Escribe el valor binario de 15 bits en la lÌnea
+                    write(current_line, s_Histogramas(celda_idx)(bin_idx));
+                    write(current_line, ' ');  -- Separador
+                end loop;
+                -- Escribe la lÌnea completa en el archivo
+                writeline(out_file, current_line);
+                -- Limpia la lÌnea para la prÛxima celda
+                deallocate(current_line);
+            end loop;   
+--            celda_idx:=celda_idx+1;
+--                if celda_idx>15 then
+--                    celda_idx:=15;
+--                end if;
             end if;
         end if;
     end process;

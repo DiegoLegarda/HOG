@@ -1,0 +1,90 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Feb  7 16:43:33 2025
+| Host         : W1125 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_hog_axi_control_sets_placed.rpt
+| Design       : top_hog_axi
+| Device       : xc7z020
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    57 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      4 |            5 |
+|      5 |            1 |
+|      6 |            1 |
+|      7 |            1 |
+|      8 |            1 |
+|      9 |            1 |
+|     10 |            1 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               8 |            2 |
+| No           | No                    | Yes                    |               5 |            3 |
+| No           | Yes                   | No                     |              12 |            6 |
+| Yes          | No                    | No                     |              83 |           19 |
+| Yes          | No                    | Yes                    |             131 |           34 |
+| Yes          | Yes                   | No                     |              64 |           23 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                   Enable Signal                   |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++----------------+---------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/cell_x_counter            | reset_IBUF                                                  |                1 |              2 |
+|  clk_IBUF_BUFG | hog_block_histogram_inst/processing_reg_n_0       | hog_block_histogram_inst/FSM_onehot_step_counter[3]_i_1_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/cell_y_counter            | reset_IBUF                                                  |                1 |              4 |
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/prev_cell_idx2[3]_i_1_n_0 |                                                             |                1 |              4 |
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/contador1                 | reset_IBUF                                                  |                1 |              4 |
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/E[0]                      | reset_IBUF                                                  |                1 |              4 |
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/y_counter                 | reset_IBUF                                                  |                1 |              5 |
+|  clk_IBUF_BUFG | U_sobel/A1/row_counter1                           | reset_IBUF                                                  |                2 |              6 |
+|  clk_IBUF_BUFG | U_sobel/A1/FIFO_counter[6]_i_1_n_0                | reset_IBUF                                                  |                2 |              7 |
+|  clk_IBUF_BUFG |                                                   |                                                             |                2 |              8 |
+|  clk_IBUF_BUFG | U_sobel/A2/h_ready                                | reset_IBUF                                                  |                3 |              9 |
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/s_mag[9]_i_1_n_0          |                                                             |                2 |             10 |
+|  clk_IBUF_BUFG |                                                   | reset_IBUF                                                  |                9 |             17 |
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/s_start_reg_n_0           | reset_IBUF                                                  |               14 |             32 |
+|  clk_IBUF_BUFG | U_sobel/s_start_reg_n_0                           |                                                             |                4 |             32 |
+|  clk_IBUF_BUFG | U_sobel/A1/E[0]                                   | reset_IBUF                                                  |               11 |             38 |
+|  clk_IBUF_BUFG | hog_cell_histogram_inst/abs_Gy[8]_i_1_n_0         |                                                             |               12 |             53 |
+|  clk_IBUF_BUFG | U_sobel/s_start_reg_n_0                           | reset_IBUF                                                  |               19 |             80 |
++----------------+---------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+
+

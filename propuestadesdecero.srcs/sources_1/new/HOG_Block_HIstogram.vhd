@@ -62,6 +62,7 @@ architecture Behavioral of hog_cell_histogram_with_fifo is
     signal a, b: std_logic_vector(9 downto 0);
     signal temp1, temp2: std_logic_vector(9 downto 0);
     signal calc_counter: integer := 0;
+    signal aux_ratio: integer := 0;
     constant CALC_LATENCY: integer := 3;
     
     
@@ -89,10 +90,10 @@ architecture Behavioral of hog_cell_histogram_with_fifo is
     0,      -- tan(0째)   * 1024
     376,    -- tan(20째)  * 1024
     839,    -- tan(40째)  * 1024
-    1494,   -- tan(60째)  * 1024
-    2792,   -- tan(80째)  * 1024
-    -2792,  -- tan(100째) * 1024
-    -1494,  -- tan(120째) * 1024
+    1773,   -- tan(60째)  * 1024
+    5809,   -- tan(80째)  * 1024
+    -5809,  -- tan(100째) * 1024
+    -1773,  -- tan(120째) * 1024
     -839,   -- tan(140째) * 1024
     -376,   -- tan(160째) * 1024
     0       -- tan(180째) * 1024
@@ -280,11 +281,11 @@ begin
          bin_complete<='0';
               if grad_valid_in = '1' then
                         if signed(grad_x_in) = 0 then
-                            if signed(grad_y_in) >= 0 then
+--                            if signed(grad_y_in) >= 0 then
                                 bin := 4;
-                            else
+--                            else
                                 bin := 4;
-                            end if;
+--                            end if;
                         -- Caso horizontal: gy = 0
                         elsif signed(grad_y_in) = 0 then
                             if signed(grad_x_in) >= 0 then
@@ -303,11 +304,12 @@ begin
                             else
                                 ratio := (gy_scaled * 1024) / gx_scaled;
                             end if;
-                            
+                            aux_ratio<=ratio;
+                             
                             -- Cuadrante 1 y 2 (0-180)
                             if signed(grad_y_in) >= 0 then
                                 for i in 0 to 8 loop
-                                    if ratio >= abs(TAN_THETA(i)) and ratio < abs(TAN_THETA(i+1)) then
+                                    if ratio >= abs(TAN_THETA(i)) and ratio <= abs(TAN_THETA(i+1)) then
                                         if signed(grad_x_in) >= 0 then
                                             bin := i;  -- Cuadrante 1
                                         else
@@ -318,11 +320,8 @@ begin
                                 end loop;
                             -- Cuadrante 3 y 4 (180-360)
                             else
-                                if ratio >= abs(TAN_THETA(4)) then  -- Si el ratio es mayor que tan(80�)
-                                    bin := 4;
-                                else
-                                    for i in 0 to 8 loop
-                                        if ratio >= abs(TAN_THETA(i)) and ratio < abs(TAN_THETA(i+1)) then
+                             for i in 0 to 8 loop
+                                        if ratio >= abs(TAN_THETA(i)) and ratio <= abs(TAN_THETA(i+1)) then
                                             if signed(grad_x_in) < 0 then
                                                 bin := i;  -- Cuadrante 3
                                             else
@@ -333,7 +332,10 @@ begin
                                     end loop;
                                 end if;
                             end if;
-                        end if;
+                        
+                        if ratio >= abs(TAN_THETA(4)) then  -- Si el ratio es mayor que tan(80�)
+                                    bin := 4;
+                             end if;
                         
                         -- Asignar resultado al bin final
                         s_bin <= bin;
